@@ -34,7 +34,6 @@ resource "aws_instance" "web" {
   ami                    = "ami_id"
   instance_type          = "t2.large"
   key_name               = "key_name" # Replace with your key pair name
-  availability_zone      = "ap-south-1a" # Change to your desired availability zone
   vpc_security_group_ids = [aws_security_group.Project-SG.id]
   user_data              = templatefile("./resource.sh", {})
 
